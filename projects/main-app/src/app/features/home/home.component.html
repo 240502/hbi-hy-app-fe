@@ -1,1 +1,7 @@
-<p>home works!</p>
+<p *ngIf="questionService.loading()">Đang tải...</p>
+<p *ngIf="questionService.error()" class="error">{{ questionService.error() }}</p>
+<ul *ngIf="!questionService.loading()">
+  <li *ngFor="let question of questionService.questions()">
+    <strong>{{ question.content }}</strong> — {{ question.id }}
+  </li>
+</ul>
