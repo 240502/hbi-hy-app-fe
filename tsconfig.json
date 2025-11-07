@@ -1,5 +1,3 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -13,7 +11,19 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+
+    // 👇 Thêm đoạn này vào bên trong compilerOptions
+    "baseUrl": "./",
+    "paths": {
+      "@core/*": ["projects/main-app/src/app/core/*"],
+      "@shared/*": ["projects/main-app/src/app/shared/*"],
+      "@features/*": ["projects/main-app/src/app/features/*"],
+      "@data-access/*": ["projects/main-app/src/app/data-access/*"],
+      "@utils/*": ["projects/main-app/src/app/utils/*"],
+      "@models/*": ["projects/main-app/src/app/models/*"],
+      "@styles/*": ["projects/main-app/src/styles/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -22,5 +32,10 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/main-app/tsconfig.app.json"
+    }
+  ]
 }
