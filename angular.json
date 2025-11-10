@@ -26,9 +26,7 @@
                 "input": "projects/main-app/public"
               }
             ],
-            "styles": [
-              "projects/main-app/src/styles.scss"
-            ],
+            "styles": ["projects/main-app/src/styles/styles.scss"],
             "server": "projects/main-app/src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -85,9 +83,7 @@
                 "input": "projects/main-app/public"
               }
             ],
-            "styles": [
-              "projects/main-app/src/styles.scss"
-            ]
+            "styles": ["projects/main-app/src/styles/styles.scss"]
           }
         }
       }

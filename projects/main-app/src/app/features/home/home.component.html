@@ -1,7 +1,88 @@
-<p *ngIf="questionService.loading()">Đang tải...</p>
-<p *ngIf="questionService.error()" class="error">{{ questionService.error() }}</p>
-<ul *ngIf="!questionService.loading()">
-  <li *ngFor="let question of questionService.questions()">
-    <strong>{{ question.content }}</strong> — {{ question.id }}
-  </li>
-</ul>
+<div class="container pb-5 mb-5 py-4 px-2">
+  <div id="home-content">
+    <div class="text-center text-dark">
+      <h5 class="fw-bold">Worker Management</h5>
+      <p class="text-muted">Hanesbrand Việt Nam</p>
+    </div>
+    <div class="card card-rounded bg-glass mb-3 p-3 shadow">
+      <div class="row pb-1">
+        <div class="col-8">
+          <h6 class="fw-bold">Xin chào !</h6>
+        </div>
+        <div class="col-4 text-end">
+          <div class="badge bg-primary fs-6 px-3 py-2">
+            {{ currentTime().toLocaleTimeString('vi-VN', { hour12: false }) }}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <small class="text-muted">Chúc bạn một ngày làm việc hiệu quả</small>
+        </div>
+        <div class="col-4 text-end">
+          <small class="text-muted">10/11/2025</small>
+        </div>
+      </div>
+    </div>
+    <div class="card card-rounded bg-glass mb-3 p-3 shadow">
+      <h6>
+        <i class="bi bi-pin-map-fill me-2 text-primary"></i>
+        <span class="fs-6 fw-bold">Trạng thái hôm nay</span>
+      </h6>
+      <h6 class="text-secondary mb-3">
+        <i class="bi bi-circle-fill text-primary me-2"></i>
+        <span class="fs-6">Chưa chấm công</span>
+      </h6>
+      <div class="row mb-3">
+        <div class="col-6">
+          <button class="btn btn-outline-primary rounded-pill w-100 shadow-sm">
+            <i class="bi bi-geo-alt me-1"></i> Chấm công
+          </button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-outline-secondary rounded-pill w-100 shadow-sm">
+            <i class="bi bi-calendar2-check-fill me-1"></i> Lịch làm việc
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 text-center">
+          <h5 class="fw-bold mb-1">22</h5>
+          <small class="text-muted">Ngày công</small>
+        </div>
+        <div class="col-6 text-center">
+          <h5 class="fw-bold mb-1">8.5</h5>
+          <small class="text-muted">Giờ tăng ca</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-rounded mb-3 p-3 shadow text-white" id="salary-card">
+      <h6><i class="bi bi-cash-stack me-1"></i> Lương tháng này</h6>
+      <h5 class="fw-bold">14.000.000 đ</h5>
+      <div class="col-4">
+        <button class="rounded-pill btn btn-light btn-sm">Xem chi tiết</button>
+      </div>
+    </div>
+    <div class="card card-rounded md-3 p-3 shadow bg-warning-subtle mb-3" id="event-card">
+      <h6><i class="bi bi-megaphone-fill me-2 text-warning"></i> Thông báo</h6>
+      <p class="text-wrap mb-1">
+        Lịch nghỉ tết nguyên đán Bính Ngọ 2026 bắt đầu từ 30/12/2025 tới 01/02/2026. Chúc mừng năm
+        mới !
+      </p>
+      <p class="text-muted">2 giờ trước</p>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-outline-dark rounded-pill w-100">
+          <i class="bi bi-tools me-1"></i> Bộ phận
+        </button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-outline-dark rounded-pill w-100">
+          <i class="bi bi-person-gear"></i> Cá nhân
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

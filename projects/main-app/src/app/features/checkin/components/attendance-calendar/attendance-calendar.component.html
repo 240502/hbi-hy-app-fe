@@ -1,0 +1,30 @@
+<mat-card class="calendar-card">
+  <mat-calendar
+    [dateClass]="dateClass"
+    (monthSelected)="onMonthSelected($event)"
+    (yearSelected)="onYearSelected($event)"
+    >>
+  </mat-calendar>
+</mat-card>
+<div class="d-flex justify-content-around flex-wrap text-center lh-base mt-3">
+  <div class="">
+    <span class="badge bg-success">&nbsp;</span>
+    Làm việc
+  </div>
+  <div class="">
+    <span class="badge bg-warning">&nbsp;</span>
+    Nghỉ phép
+  </div>
+  <div class="">
+    <span class="badge bg-danger">&nbsp;</span>
+    Nghỉ không lương
+  </div>
+  <div class="">
+    <span class="badge bg-light border">&nbsp;</span>
+    Chưa làm/ ngày trống
+  </div>
+  <div class="">
+    <span class="badge border border-primary">&nbsp;</span>
+    Hôm nay
+  </div>
+</div>

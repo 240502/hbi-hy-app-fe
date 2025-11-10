@@ -1,0 +1,41 @@
+/* ✅ Dùng ::ng-deep để style áp dụng được vào MatCalendar */
+::ng-deep .work-day .mat-calendar-body-cell-content {
+  background-color: #4caf50; /* xanh lá */
+  color: white;
+  border-radius: 50%;
+}
+
+::ng-deep .absent-day .mat-calendar-body-cell-content {
+  background-color: #f44336; /* đỏ */
+  color: white;
+  border-radius: 50%;
+}
+
+::ng-deep .leave-day .mat-calendar-body-cell-content {
+  background-color: #ffeb3b; /* vàng */
+  color: black;
+  border-radius: 50%;
+}
+
+/* ✅ Legend hiển thị chú thích */
+.legend-item {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+
+  &.work {
+    background: #4caf50;
+    color: white;
+  }
+
+  &.absent {
+    background: #f44336;
+    color: white;
+  }
+
+  &.leave {
+    background: #ffeb3b;
+    color: black;
+  }
+}

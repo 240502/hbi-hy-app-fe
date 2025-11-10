@@ -4,7 +4,7 @@ import { Question } from '@models/question';
 import { ApiResponse } from './types/api-response';
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
-  question = signal<Question[] | undefined>([]);
+  questions = signal<Question[] | undefined>([]);
   loading = signal(false);
   error = signal<string | null>(null);
 
@@ -13,12 +13,16 @@ export class QuestionService {
   loadQuestions(options: { page: number; limit: number }) {
     this.loading.set(true);
     this.error.set(null);
-    this.http.get<ApiResponse<Question[]>>(``).subscribe({
-      next: (response) => {
-        this.question.set(response.metadata);
-      },
-      error: (err) => this.error.set(err.message || 'Không thể tải dữ liệu!'),
-      complete: () => this.loading.set(false),
-    });
+    this.http
+      .get<
+        ApiResponse<Question[]>
+      >(`http://localhost:3001/api/question/questions`, { withCredentials: true })
+      .subscribe({
+        next: (response) => {
+          this.questions.set(response.metadata);
+        },
+        error: (err) => this.error.set(err.message || 'Không thể tải dữ liệu!'),
+        complete: () => this.loading.set(false),
+      });
   }
 }

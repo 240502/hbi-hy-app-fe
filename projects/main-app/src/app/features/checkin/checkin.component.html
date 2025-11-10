@@ -1,0 +1,70 @@
+<div class="container pb-5 mb-5 py-4 px-2">
+  <div id="checkin-content">
+    <div class="card card-rounded shadow p-4 mb-3">
+      <div class="row flex-column">
+        <h3 class="text-primary text-center">
+          <i class="bi bi-clock-history fs-1"></i>
+        </h3>
+        <h5 class="fw-medium text-center">Chấm công hôm nay</h5>
+        <p class="text-wrap text-muted text-center fs-6 lh-base">
+          Bạn chưa chấm công. Hãy xác nhận vị trí để ghi nhận thời gian làm việc
+        </p>
+        <div class="col-12">
+          <button class="btn btn-primary rounded-pill mt-3 w-100 pt-2 pb-2">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            Chấm công ngay
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card card-rounded shadow p-3 mb-3">
+      <h5 class="text-primary">
+        <i class="bi bi-bar-chart-line me-1"></i>
+        Thống kê tháng 11/2025
+      </h5>
+      <mat-grid-list cols="2" rowHeight="2:1" gutterSize="10px">
+        <mat-grid-tile>
+          <div class="card text-center card-rounded pt-2 pb-2 w-100">
+            <h5 class="text-success fw-bold" id="workday">26</h5>
+            <span class="text-muted fw-medium">Ngày công</span>
+          </div></mat-grid-tile
+        >
+        <mat-grid-tile>
+          <div class="card text-center card-rounded pt-2 pb-2 w-100">
+            <h5 class="fw-bold text-warning" id="workday">3</h5>
+            <span class="text-muted fw-medium">Nghỉ phép</span>
+          </div></mat-grid-tile
+        >
+        <mat-grid-tile>
+          <div class="card text-center card-rounded pt-2 pb-2 w-100">
+            <h5 class="fw-bold text-danger" id="workday">0</h5>
+            <span class="text-muted fw-medium">Nghỉ không phép</span>
+          </div></mat-grid-tile
+        >
+        <mat-grid-tile>
+          <div class="card text-center card-rounded pt-2 pb-2 w-100">
+            <h5 class="fw-bold text-info" id="workday">40 tiếng</h5>
+            <span class="text-muted fw-medium">Giờ tăng ca</span>
+          </div></mat-grid-tile
+        >
+        <mat-grid-tile>
+          <div class="card text-center card-rounded pt-2 pb-2 w-100">
+            <h5 class="fw-bold text-primary" id="workday">100%</h5>
+            <span class="text-muted fw-medium">Năng xuất làm việc</span>
+          </div></mat-grid-tile
+        >
+      </mat-grid-list>
+    </div>
+    <div class="card card-rounded mb-3">
+      <div class="card-title pt-3 ps-3">
+        <h6 class="text-primary fw-bold">
+          <i class="bi bi-calendar3 me-2"></i>
+          Lịch tháng 11/1015
+        </h6>
+      </div>
+      <div class="card-body">
+        <app-attendance-calendar></app-attendance-calendar>
+      </div>
+    </div>
+  </div>
+</div>
