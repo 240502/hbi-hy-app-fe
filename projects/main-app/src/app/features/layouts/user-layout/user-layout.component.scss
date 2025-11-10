@@ -1,4 +1,6 @@
 #main-content {
   max-width: 500px;
   margin: auto;
+  min-height: calc(100vh - 60px); // 60px = chiều cao footer
+  padding-bottom: 60px; // tránh footer đè nội dung
 }

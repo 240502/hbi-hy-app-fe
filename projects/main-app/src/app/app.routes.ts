@@ -12,7 +12,7 @@ export const routes: Routes = [
         component: HomeComponent,
         title: 'Trang chủ',
       },
-      { path: 'checkin', component: CheckinComponent, title: 'CheckIn' },
+      { path: 'check-in', component: CheckinComponent, title: 'CheckIn' },
     ],
   },
 ];

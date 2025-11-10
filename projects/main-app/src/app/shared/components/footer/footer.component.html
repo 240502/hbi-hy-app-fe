@@ -1,27 +1,35 @@
 <nav
   id="menu-tabs"
-  class="menu-tabs d-flex justify-content-between p-2 bg-light fixed-bottom border-top"
+  class="container-fluid menu-tabs d-flex justify-content-between bg-light fixed-bottom border-top"
 >
-  <li class="active list-unstyled">
-    <a class="text-decoration-none d-flex flex-column text-center text-secondary" href="">
+  <li
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="menu-item"
+  >
+    <a class="menu-link">
       <i class="bi bi-house-door-fill fs-5"></i>
       <span>Trang chủ</span>
     </a>
   </li>
-  <li class="list-unstyled">
-    <a class="text-decoration-none d-flex flex-column text-center text-secondary" href="checkin">
+
+  <li routerLink="/check-in" routerLinkActive="active" class="menu-item">
+    <a class="menu-link">
       <i class="bi bi-clock-history fs-5"></i>
       <span>Chấm công</span>
     </a>
   </li>
-  <li class="list-unstyled">
-    <a class="text-decoration-none d-flex flex-column text-center text-secondary" href="#">
+
+  <li routerLink="/function" routerLinkActive="active" class="menu-item">
+    <a class="menu-link">
       <i class="bi bi-kanban fs-5"></i>
       <span>Chức năng</span>
     </a>
   </li>
-  <li class="list-unstyled">
-    <a class="text-decoration-none d-flex flex-column text-center text-secondary" href="#">
+
+  <li routerLink="/profile" routerLinkActive="active" class="menu-item">
+    <a class="menu-link">
       <i class="bi bi-person-circle fs-5"></i>
       <span>Cá nhân</span>
     </a>

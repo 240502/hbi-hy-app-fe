@@ -1,34 +1,48 @@
 #menu-tabs {
+  list-style-type: none;
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0; /* dùng left+right thay vì width:100% */
-  height: 60px;
+  right: 0;
+  height: 64px;
   background: #fff;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-  z-index: 1050;
-
+  border-top: 1px solid #dee2e6;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 
-  /* Fix overflow do pixel rounding khi scroll */
-  transform: translateZ(0);
-  overflow-x: hidden;
-  li {
-    flex: 1;
-    list-style: none;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+
+  .menu-item a.menu-link {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i {
+      font-size: 1.3rem;
+      margin-bottom: 2px;
+      transition:
+        transform 0.2s ease,
+        color 0.25s ease;
+      will-change: transform;
+    }
   }
-  a {
-    font-size: 0.9rem;
-  }
-  li.active a {
-    color: #0d6efd !important; /* Màu xanh Bootstrap */
-  }
-  li.active i {
+
+  .menu-item.active a.menu-link {
+    color: #007bff;
+    i {
+      color: #007bff;
+      transform: scale(1.1);
+    }
   }
 }
